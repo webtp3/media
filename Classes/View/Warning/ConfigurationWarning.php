@@ -111,7 +111,7 @@ class ConfigurationWarning extends AbstractComponentView
      */
     protected function getWarmUpSemaphoreFile()
     {
-        return PATH_site . 'typo3temp/.media_cache_warmed_up';
+        return \TYPO3\CMS\Core\Core\Environment::getPublicPath() . 'typo3temp/.media_cache_warmed_up';
     }
 
     /**

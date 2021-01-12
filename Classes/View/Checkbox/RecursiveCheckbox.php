@@ -21,7 +21,7 @@ class RecursiveCheckbox extends AbstractComponentView
 
     /**
      * @var \Fab\Vidi\Module\ModuleLoader
-     * @inject
+     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $moduleLoader;
 

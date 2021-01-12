@@ -35,7 +35,7 @@ class CacheWarmUpTool extends AbstractTool
     {
         $templateNameAndPath = 'EXT:media/Resources/Private/Standalone/Tool/CacheWarmUp/Launcher.html';
         $view = $this->initializeStandaloneView($templateNameAndPath);
-        $view->assign('sitePath', PATH_site);
+        $view->assign('sitePath', \TYPO3\CMS\Core\Core\Environment::getPublicPath());
         return $view->render();
     }
 
@@ -73,7 +73,7 @@ class CacheWarmUpTool extends AbstractTool
      */
     protected function getWarmUpSemaphorFile()
     {
-        return PATH_site . 'typo3temp/.media_cache_warmed_up';
+        return \TYPO3\CMS\Core\Core\Environment::getPublicPath() . 'typo3temp/.media_cache_warmed_up';
     }
 
     /**

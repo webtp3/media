@@ -40,7 +40,7 @@ class DuplicateFilesFinderTool extends AbstractTool
         $templateNameAndPath = 'EXT:media/Resources/Private/Standalone/Tool/DuplicateFilesFinder/Launcher.html';
         $view = $this->initializeStandaloneView($templateNameAndPath);
         $view->assign('isAdmin', $this->getBackendUser()->isAdmin());
-        $view->assign('sitePath', PATH_site);
+        $view->assign('sitePath', \TYPO3\CMS\Core\Core\Environment::getPublicPath());
         return $view->render();
     }
 

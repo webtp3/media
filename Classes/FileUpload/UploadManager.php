@@ -293,7 +293,7 @@ class UploadManager
      */
     protected function initializeUploadFolder()
     {
-        $this->uploadFolder = PATH_site . self::UPLOAD_FOLDER;
+        $this->uploadFolder = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . self::UPLOAD_FOLDER;
 
         // Initialize the upload folder for file transfer and create it if not yet existing
         if (!file_exists($this->uploadFolder)) {

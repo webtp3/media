@@ -57,7 +57,7 @@ class FileCacheCommandController extends CommandController
                 #$storage->getProcessingFolder()->delete(true); // will not work
 
                 // Well... not really FAL friendly but straightforward for Local drivers.
-                $processedDirectoryPath = PATH_site . $storage->getProcessingFolder()->getPublicUrl();
+                $processedDirectoryPath = \TYPO3\CMS\Core\Core\Environment::getPublicPath() . $storage->getProcessingFolder()->getPublicUrl();
                 $fileIterator = new FilesystemIterator($processedDirectoryPath, FilesystemIterator::SKIP_DOTS);
                 $numberOfProcessedFiles = iterator_count($fileIterator);
 

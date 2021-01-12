@@ -1,6 +1,7 @@
 {
-	"name": "fab/media",
+	"name": "web-tp3/media",
 	"type": "typo3-cms-extension",
+	"version": "10.4.0",
 	"description": "Media management system for TYPO3 CMS.",
 	"homepage": "https://github.com/fabarea/media",
 	"license": [
@@ -19,6 +20,10 @@
 		}
 	},
 	"replace": {
-		"typo3-ter/media": "self.version"
+		"typo3-ter/media": "self.version",
+		"fab/media": "self.version",
+		"web-tp3/media": "self.version"
+
+
 	}
 }

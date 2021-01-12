@@ -37,7 +37,7 @@ class ThumbnailGeneratorTool extends AbstractTool
     {
         $templateNameAndPath = 'EXT:media/Resources/Private/Standalone/Tool/ThumbnailGenerator/Launcher.html';
         $view = $this->initializeStandaloneView($templateNameAndPath);
-        $view->assign('sitePath', PATH_site);
+        $view->assign('sitePath', \TYPO3\CMS\Core\Core\Environment::getPublicPath());
         return $view->render();
     }
 
